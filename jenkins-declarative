@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+    stage("Git checkout"){
+        steps{
+         git branch: 'main', credentialsId: 'Git-Hub', url: 'https://github.com/kkarthikdeekonda/demo.git'   
+            }
+         }
+    }
+}
